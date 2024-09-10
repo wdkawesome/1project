@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+<link href = "{% static 'indexCSS.css' %}" rel = "stylesheet" type = "text/css">
+
+{% block content %}
+<h1>About Hamish</h1>
+<img src="{% static 'assets/hamish.jpeg' %}" alt="Picture of Hamish MacDonald" width="300" height="500" class="displayed">
+<p>Hamish MaDonald has been an SNP MSP since June 2010 representing the constituency of the Western Isles.
+    Hamish gained a PhD in Scots Language from Newton Stewart University in 1995 before joining the Western Isles Telegraph as Lead Agriculture and Wildlife Reporter.
+    Outside of politics Hamish is a keen cyclist and an avid Loch Ness Monster spotter. When Hamish isn't competing in cycle sportives or camping on the banks of Loch Ness, 
+    he can be found practicing his boomerang carpentary skills in his garden shed. Hamish is also the only known person to be able to fluently speak the Scots Language 
+    backwards after suffering a strike to the head from a returning self made boomerang. </p>
+
+<img src="{% static 'assets/nessy.jpeg' %}" alt="Loch Ness Monster" width="700" height="500" class="displayed">
+
+ <p>Hamish takes great pride in his charity work and was the key founder of BAS (Boomerang Awareness Scotiety) which aims to educate the general 
+    public on the dangers of boomerangs. He has also taken part in several charity bike rides and disputes claims that he used charity money to buy his 
+    most recent carbon fibre time trial bike.</p>
+{% endblock %}

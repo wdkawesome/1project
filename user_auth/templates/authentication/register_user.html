@@ -1,0 +1,43 @@
+<h1> Register User </h1>
+</br>
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+<!--Use crispy forms to improve look/layout - don't forget to apply in the settings file-->
+{% load crispy_forms_tags %}
+
+<!--REF for displaying messages: https://docs.djangoproject.com/en/4.1/ref/contrib/messages/-->
+
+
+<form class="form-group" method=POST>
+    <!--The {% csrf_token %} line inserts a cross-site request forgery (CSRF) token, which is required by every Django form-->
+    {% csrf_token %}
+
+
+ 
+    {{form|crispy}}
+
+    <!--REF - https://docs.djangoproject.com/en/4.1/topics/auth/default/
+            https://www.youtube.com/watch?v=EqjRhO5CK6A
+            https://www.youtube.com/watch?v=Ev5xgwndmfc-->
+    
+    <input type="submit" value="Register" />
+</form>
+<br>
+<p><b>NOTE:</b>FOLLOWING SUCCESSFUL REGISTRATION YOU WILL BE REDIRECTED TO THE HOME PAGE WHERE YOU CAN THEN LOGIN WITH YOUR DETAILS.
+</p>
+</br>
+<p>Already have an account? Then click on the below link to login.</p>
+<ul>
+    <li><a href="/user_auth">Login Page</a></li>
+</ul>
+</br>
+</br> 
+    <p> Feeling a little lost? Click on the below link to go back to the home page.</p>
+<ul>
+    <li><a href="/">Back Home</a></li>
+</ul>

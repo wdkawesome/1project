@@ -1,0 +1,35 @@
+<h1> Login as User </h1>
+
+{% if messages %}
+    <ul class="messages">
+        {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+<form action="{% url 'user_auth:authenticate_user' %}" method="post">
+    {% csrf_token %}
+
+    <label>Username</label>
+    <input type="text" name="username" placeholder="User" required>
+    <br/><br/>
+
+    <label>Password</label>
+    <input type="password" name="password" placeholder="Shhh, don't tell anyone" required>
+    <br/><br/>
+
+    <input type="submit" value="Login" />
+</form>
+
+</br>
+<p> Don't have a login? Click on the below link...</p>
+<ul>
+    <li><a href="register_user">Create a login</a></li>
+</ul>
+</br> 
+<p> Feeling a little lost? Click on the below link to go back to the home page.</p>
+<ul>
+    <li><a href="/">Back Home</a></li>
+</ul>

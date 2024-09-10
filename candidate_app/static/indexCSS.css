@@ -1,0 +1,71 @@
+/*REF: https://css-tricks.com/fixing-tables-long-strings/
+REF: https://developer.mozilla.org/en-US/docs/Learn/CSS/CSS_layout/Introduction */
+
+p {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 15px;
+    background-color: rgb(185, 235, 235);
+}
+
+body {
+    text-align: left;
+    background-color: rgb(185, 235, 235);
+    padding: 11px;
+}
+
+h1 {
+    text-align: center;
+    color: darkblue;
+    background-color: rgb(106, 167, 193);
+    top: 0;
+    position: sticky; /* Keeps the header as the user scrolls. */
+}
+
+navbar {
+    width: 100%;
+    margin:0px 0;
+  }
+      navbar ul{
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+  }
+
+
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table {
+    table-layout: auto;
+    width: 100%;
+    border: 4px solid rgb(65, 3, 211);
+    
+}
+/* Have alternating colours for table rows (using odd and even). */
+    tbody tr:nth-child(odd) {
+    background-color: #af85e5;
+}
+  
+    tbody tr:nth-child(even) {
+    background-color: #9ca6ef;
+}
+  
+  
+    table {
+    background-color: #0088e2;
+  }
+
+h2 {
+    text-align: left;
+    color:royalblue;
+    background-color: rgb(153, 199, 237);
+    padding: 5px;
+}

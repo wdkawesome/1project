@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+<link href = "{% static 'indexCSS.css' %}" rel = "stylesheet" type = "text/css">
+{% block content %}
+<h1>Hamish MacDonald - Member of Scottish Parliament (MSP)</h1>
+
+<img src="{% static 'assets/edinburgh_castle.jpeg' %}" alt="Edinburgh Castle" width="800" height="500" class="align-items-center">
+
+<p>Through this site, I hope I can give you an insight into some of my work representing the Scottish Parliament. I am always keen to hear directly from constituents. If you have an issue I may be able to assist with, or want to comment on wider political matters, please do not hesitate to get in touch.</p>
+<p>Together we can build a better Scotland, not just for ourselves but for future generations.</p>
+{% endblock %}
