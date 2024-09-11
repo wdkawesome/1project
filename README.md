@@ -4,12 +4,13 @@
 1. Running the app via a Virtual Environment (VENV)
 1. Running the app on Docker
 
-### Running the app via a Virtual Environment (VENV) - For those operating Macbooks
+### Running the app via a Virtual Environment (VENV)
 1. Clone this repository on to your machine
 1. Open a terminal window
 1. Navigate to the directory where you want to create the virtual environment.
 1. Enter the following command to create a new virtual environment:"python3 -m venv [name of virtual environment]" or "python -m venv [name of virtual environment]
 1. activate the virtual environment by running the following command: "source [name of virtual environment]/bin/activate" or "[name of virtual environment]\Scripts\activate"
+1. Enter the following command to ensure migrations are made (Windows): "python manage.py migrate"
 1. Navigate to the project server (you should see 'manage.py' as one of the files) and run the server: "python3 manage.py runserver" or "python manage.py runserver"
 1. You will then be provided with a link - copy this into your browser and the website should be visible
 
